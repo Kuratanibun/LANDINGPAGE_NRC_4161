@@ -1,0 +1,285 @@
+.top-header {
+  position: fixed;
+  background-color: lightgreen;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 75rem;
+}
+
+.Menu-Horizontal li {
+  list-style: none;
+  justify-content: space-around;
+  padding: 0.938rem 1.25rem;
+  color: white;
+}
+
+.Menu-Horizontal li a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.Menu-Tiendas {
+  padding: 0;
+  position: absolute;
+  display: none;
+  width: 7.188rem;
+  background-color: lightblue;
+}
+
+.Menu-Horizontal li:hover .Menu-Tiendas {
+  display: block;
+}
+
+.Menu-Tiendas li:hover {
+  background-color: rgb(235, 226, 226);
+}
+
+.Menu-Tiendas li {
+  display: block;
+  color: black;
+  padding: 0.938rem 0.938rem 0.938rem 1.25rem;
+}
+
+.Menu-Tiendas li a {
+  text-decoration: none;
+}
+
+.Menu-Vertical {
+  padding: 0;
+
+  position: absolute;
+
+  display: none;
+
+  width: 8.125rem;
+
+  background-color: skyblue;
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+.Menu-Vertical li:hover {
+  background-color: rgb(235, 226, 226);
+}
+
+.Menu-Vertical li {
+  display: block;
+
+  color: rgb(62, 8, 242);
+
+  padding: 0.938rem 0.938rem 0.938rem 1.25rem;
+}
+
+/**/
+.seccion-productos {
+  padding: 5rem 1.25rem;
+  background-color: rgb(142, 186, 224);
+}
+
+.cont-gnral-productos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.cont-prod-texto {
+  flex: 1;
+}
+
+.cont-prod-texto h2 {
+  color: white;
+  margin-bottom: 0.938rem;
+}
+
+.cont-prod-texto p {
+  color: black;
+  line-height: 1.5;
+}
+
+.cont-prod-imag img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1.25rem;
+}
+
+.cont-gnral-beneficios {
+  gao: 2.5rem;
+}
+
+.cont-benef-texto {
+  flex: 1;
+}
+
+.cont-benef-texto h2 {
+  color: blue;
+  margin-bottom: 0.938rem;
+}
+
+.cont-benef-texto p {
+  color: black;
+  line-height: 1.6;
+}
+
+/*Seccion-Actividades*/
+
+.Seccion-Actividades {
+  padding: 10rem 1.875rem;
+
+  background-color: whiter;
+}
+.seccion-formulario {
+  background-color: aquamarine;
+  padding: 2.5rem;
+  border: 0.188rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.div-con-formulario {
+  background-color: aliceblue;
+  padding: 1.875rem;
+  border: 0.125rem solid #000000;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 31.25rem;
+}
+
+.campo {
+  border: 0.063rem;
+  padding: 0.938rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  background-color: yellowgreen;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: blue;
+}
+
+/imput y select/ input[type-text],
+select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.063rem solid #000000;
+  border-radius: 0.313rem;
+}
+
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  margin: 0;
+  border: 0.313rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.lista-checkbox li,
+.lista-radio li {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.313rem;
+  cursor: pointer;
+}
+
+/* Footer general */
+.footer {
+  background-color: #222; /* Fondo oscuro para contraste */
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor flexible para 3 columnas */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+  gap: 2rem;
+}
+
+/* Marca o logotipo */
+.footer-brand {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-logo {
+  width: 3.75rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Enlaces legales */
+.footer-links {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Redes sociales con íconos */
+.footer-social {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 48rem) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social img {
+    margin-bottom: 0.5rem;
+  }
+}
