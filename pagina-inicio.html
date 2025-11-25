@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Proyecto Personal ÑamÑamLand</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="top-header">
+      <a href="" class="logo">
+        <img height="70" width="80" src="Imagenes/Mask group.png" alt="Logo" />
+      </a>
+      <ul class="Menu-Horizontal">
+        <li><a href="">PRODUCTOS</a></li>
+        <li>
+          <a href="">SOLUCIONES</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Banco movil</a></li>
+            <li><a href="">Banca por internet</a></li>
+            <li><a href="">Yape</a></li>
+            <li><a href="">Cocos y Lucas</a></li>
+          </ul>
+        </li>
+        <li><a href="">BENEFICIOS</a></li>
+        <li><a href="">AYUDA</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sección Productos -->
+    <section class="seccion-productos">
+      <div class="cont-gnral-productos">
+        <div class="cont-prod-texto">
+          <h1>Seccion Producto</h1>
+          <p>
+            Estos productos son perfectos para aquellos que buscan un dulce para
+            disfrutar en solitario o para llevar.
+          </p>
+        </div>
+        <div class="cont-prod-imag">
+          <img src="Imagenes/unsplash_tC7LFlKdF0g.png" alt="Producto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Beneficios -->
+    <section class="seccion-beneficios">
+      <div class="cont-gnral-beneficios">
+        <div class="cont-benef-texto">
+          <h1>Seccion Beneficios</h1>
+          <p>
+            La repostería es el arte de preparar dulces, postres y pasteles, y
+            ofrece beneficios como el desarrollo de habilidades motoras y
+            matemáticas en niños, la reducción del estrés y la mejora del
+            bienestar emocional al concentrarse en una actividad creativa y
+            gratificante. También puede ser una fuente de ingresos, una forma de
+            expresar amor y un medio para disfrutar de productos más saludables
+            cuando se prepara de forma casera.
+          </p>
+        </div>
+        <div class="cont-ben-imag">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/r87KDuxy7II"
+            title="Video de repostería"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contactanos/Formulario -->
+    <section class="seccion-formulario">
+      <div class="div-con-formulario">
+        <h2>Formulario de Registro</h2>
+        <p>Complete todos los campos</p>
+        <div class="formulario">
+          <div class="campo">
+            <label for="nombre">Nombres completos:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese sus nombres"
+            />
+          </div>
+
+          <!-- Lista desplegable -->
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="">Seleccione un país</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Perú">Perú</option>
+            </select>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="campo">
+            <label>Interés:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label>
+                  <input type="checkbox" name="interes" value="tecnologia" />
+                  Tecnología
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="interes" value="arte" />
+                  Arte
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="interes" value="deporte" />
+                  Deporte
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Radio buttons -->
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li>
+                <label>
+                  <input type="radio" name="genero" value="masculino" />
+                  Masculino
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="genero" value="femenino" />
+                  Femenino
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Marca o logotipo -->
+        <div class="footer-brand">
+          <h4>ÑamÑamLand</h4>
+          <p>La mejor repostería artesanal</p>
+        </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="">Política de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+          <a href="">Protección de Datos</a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+              alt="Facebook"
+              class="social-icon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+              alt="Instagram"
+              class="social-icon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+              alt="Twitter"
+              class="social-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

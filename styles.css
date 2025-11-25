@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.top-header {
+  position: fixed;
+  background-color: lightgreen;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  z-index: 1000;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 75rem;
+}
+
+.Menu-Horizontal li {
+  list-style: none;
+  justify-content: space-around;
+  padding: 0.938rem 1.25rem;
+  color: white;
+  position: relative;
+}
+
+.Menu-Horizontal li a {
+  color: white;
+  text-decoration: none;
+}
+
+.Menu-Horizontal li a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.Menu-Tiendas {
+  padding: 0;
+  position: absolute;
+  display: none;
+  width: 7.188rem;
+  background-color: lightblue;
+}
+
+.Menu-Horizontal li:hover .Menu-Tiendas {
+  display: block;
+}
+
+.Menu-Tiendas li:hover {
+  background-color: rgb(235, 226, 226);
+}
+
+.Menu-Tiendas li {
+  display: block;
+  color: black;
+  padding: 0.938rem 0.938rem 0.938rem 1.25rem;
+}
+
+.Menu-Tiendas li a {
+  text-decoration: none;
+}
+
+.Menu-Vertical {
+  padding: 0;
+  position: absolute;
+  display: none;
+  width: 8.125rem;
+  background-color: skyblue;
+  top: 100%;
+  left: 0;
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+.Menu-Vertical li:hover {
+  background-color: rgb(235, 226, 226);
+}
+
+.Menu-Vertical li {
+  display: block;
+  color: rgb(62, 8, 242);
+  padding: 0.938rem 0.938rem 0.938rem 1.25rem;
+}
+
+.Menu-Vertical li a {
+  color: rgb(62, 8, 242);
+  text-decoration: none;
+}
+
+/* Sección Productos */
+.seccion-productos {
+  padding: 7rem 1.25rem 3rem;
+  background-color: rgb(142, 186, 224);
+}
+
+.cont-gnral-productos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 1.25rem;
+}
+
+.cont-prod-texto {
+  flex: 1;
+}
+
+.cont-prod-texto h1 {
+  color: white;
+  margin-bottom: 0.938rem;
+}
+
+.cont-prod-texto p {
+  color: black;
+  line-height: 1.5;
+}
+
+.cont-prod-imag img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1.25rem;
+}
+
+/* Sección Beneficios */
+.seccion-beneficios {
+  padding: 3rem 1.25rem;
+  background-color: #f0f0f0;
+}
+
+.cont-gnral-beneficios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.cont-benef-texto {
+  flex: 1;
+}
+
+.cont-benef-texto h1 {
+  color: blue;
+  margin-bottom: 0.938rem;
+}
+
+.cont-benef-texto p {
+  color: black;
+  line-height: 1.6;
+}
+
+.cont-ben-imag {
+  flex: 1;
+}
+
+.cont-ben-imag iframe {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 1.25rem;
+}
+
+/* Sección Actividades */
+.Seccion-Actividades {
+  padding: 10rem 1.875rem;
+  background-color: white;
+}
+
+/* Formulario */
+.seccion-formulario {
+  background-color: aquamarine;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.div-con-formulario {
+  background-color: aliceblue;
+  padding: 1.875rem;
+  border: 0.125rem solid #000000;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 31.25rem;
+}
+
+.div-con-formulario h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.div-con-formulario p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.campo {
+  padding: 0.938rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  background-color: yellowgreen;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: blue;
+}
+
+/* input y select */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.063rem solid #000000;
+  border-radius: 0.313rem;
+}
+
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  margin: 0;
+  padding: 0.625rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.lista-checkbox li,
+.lista-radio li {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.313rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+/* ============================================ */
+/* ESTILOS DEL MODAL DE LOGIN */
+/* ============================================ */
+
+/* Overlay del modal - fondo oscuro que cubre toda la pantalla */
+.modal-overlay {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+/* Cuando el modal está activo */
+.modal-overlay.active {
+  display: flex;
+}
+
+/* Contenedor principal: Centra el formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+/* La caja del formulario */
+.login-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 25rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Botón de cerrar (X) */
+.btn-cerrar-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  width: auto;
+  padding: 0;
+  line-height: 1;
+}
+
+.btn-cerrar-modal:hover {
+  color: #ff0000;
+  background: transparent;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5625rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* División para agrupar Label e Input */
+.input-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Estilo del botón de login */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: #2575fc;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.625rem;
+}
+
+.login-button:hover {
+  background-color: #0e63e2;
+}
+
+/* Footer general */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor flexible para 3 columnas */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+  gap: 2rem;
+}
+
+/* Marca o logotipo */
+.footer-brand {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-logo {
+  width: 3.75rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Enlaces legales */
+.footer-links {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Redes sociales con íconos */
+.footer-social {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-social h4 {
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 48rem) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social img {
+    margin-bottom: 0.5rem;
+  }
+
+  .cont-gnral-productos,
+  .cont-gnral-beneficios {
+    flex-direction: column;
+  }
+
+  /* Ajustes del login en móvil */
+  .login-box {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .login-box h2 {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+
+  .input-group input {
+    padding: 1rem;
+  }
+}
