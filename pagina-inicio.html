@@ -12,10 +12,18 @@
       <a href="" class="logo">
         <img height="70" width="80" src="Imagenes/Mask group.png" alt="Logo" />
       </a>
-      <ul class="Menu-Horizontal">
+
+      <!-- Botón hamburguesa -->
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="Menu-Horizontal" id="menuHorizontal">
         <li><a href="">PRODUCTOS</a></li>
-        <li>
-          <a href="">SOLUCIONES</a>
+        <li class="has-submenu">
+          <a href="" onclick="toggleSubmenu(event)">SOLUCIONES</a>
           <ul class="Menu-Vertical">
             <li><a href="">Banco movil</a></li>
             <li><a href="">Banca por internet</a></li>
@@ -205,5 +213,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
