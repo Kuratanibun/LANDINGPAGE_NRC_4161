@@ -20,6 +20,47 @@ body {
   z-index: 1000;
 }
 
+/* ============================================ */
+/* BOTÓN HAMBURGUESA - LAS 3 RAYITAS */
+/* ============================================ */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación: convertir las rayitas en X cuando está activo */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ============================================ */
+/* MENÚ HORIZONTAL - DESKTOP */
+/* ============================================ */
 .Menu-Horizontal {
   list-style: none;
   display: flex;
@@ -265,9 +306,8 @@ button:hover {
 /* ESTILOS DEL MODAL DE LOGIN */
 /* ============================================ */
 
-/* Overlay del modal - fondo oscuro que cubre toda la pantalla */
 .modal-overlay {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -278,12 +318,10 @@ button:hover {
   overflow-y: auto;
 }
 
-/* Cuando el modal está activo */
 .modal-overlay.active {
   display: flex;
 }
 
-/* Contenedor principal: Centra el formulario */
 .login-container {
   display: flex;
   justify-content: center;
@@ -293,7 +331,6 @@ button:hover {
   padding: 1.25rem;
 }
 
-/* La caja del formulario */
 .login-box {
   background: white;
   padding: 2.5rem;
@@ -305,7 +342,6 @@ button:hover {
   position: relative;
 }
 
-/* Botón de cerrar (X) */
 .btn-cerrar-modal {
   position: absolute;
   top: 1rem;
@@ -331,7 +367,6 @@ button:hover {
   font-size: 1.8rem;
 }
 
-/* División para agrupar Label e Input */
 .input-group {
   margin-bottom: 1.25rem;
   text-align: left;
@@ -358,7 +393,6 @@ button:hover {
   outline: none;
 }
 
-/* Estilo del botón de login */
 .login-button {
   width: 100%;
   padding: 0.75rem;
@@ -384,7 +418,6 @@ button:hover {
   font-family: "Roboto", sans-serif;
 }
 
-/* Contenedor flexible para 3 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -395,7 +428,6 @@ button:hover {
   gap: 2rem;
 }
 
-/* Marca o logotipo */
 .footer-brand {
   flex: 1;
   min-width: 12.5rem;
@@ -407,7 +439,6 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Enlaces legales */
 .footer-links {
   flex: 1;
   min-width: 12.5rem;
@@ -428,7 +459,6 @@ button:hover {
   color: #fff;
 }
 
-/* Redes sociales con íconos */
 .footer-social {
   flex: 1;
   min-width: 12.5rem;
@@ -449,8 +479,77 @@ button:hover {
   transform: scale(1.2);
 }
 
-/* Responsive para pantallas pequeñas */
-@media (max-width: 48rem) {
+/* ============================================ */
+/* RESPONSIVE MÓVIL - MENÚ HAMBURGUESA */
+/* ============================================ */
+@media (max-width: 768px) {
+  /* MOSTRAR BOTÓN HAMBURGUESA */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* MENÚ MÓVIL DESLIZABLE */
+  .Menu-Horizontal {
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: calc(100vh - 5rem);
+    background-color: lightgreen;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+
+  .Menu-Horizontal.active {
+    right: 0;
+  }
+
+  .Menu-Horizontal li {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .Menu-Horizontal li a {
+    display: block;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  /* SUBMENÚ MÓVIL */
+  .Menu-Vertical {
+    position: static;
+    width: 100%;
+    background-color: rgba(135, 206, 235, 0.5);
+    display: none;
+    margin-top: 0.5rem;
+  }
+
+  .has-submenu.submenu-open .Menu-Vertical {
+    display: block !important;
+  }
+
+  .Menu-Vertical li {
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    border-bottom: none;
+  }
+
+  .Menu-Vertical li a {
+    font-size: 1rem;
+  }
+
+  /* Desactivar hover desktop */
+  .Menu-Horizontal li:hover .Menu-Vertical {
+    display: none;
+  }
+
+  /* Otros ajustes responsive */
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -466,7 +565,6 @@ button:hover {
     flex-direction: column;
   }
 
-  /* Ajustes del login en móvil */
   .login-box {
     padding: 1.5rem;
     margin-top: 2rem;
@@ -481,5 +579,131 @@ button:hover {
 
   .input-group input {
     padding: 1rem;
+  }
+}
+
+/* ============================================ */
+/* DESKTOP - Hover funcional */
+/* ============================================ */
+@media (min-width: 769px) {
+  .Menu-Horizontal li:hover .Menu-Vertical {
+    display: block;
+  }
+}
+
+/* ============================================ */
+/* BOTÓN HAMBURGUESA - VERSIÓN VISIBLE FORZADA */
+/* ============================================ */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between; /* Cambiado de space-around */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.625rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block !important;
+  width: 100% !important;
+  height: 4px !important; /* Más grueso para que se vea mejor */
+  background-color: white !important;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animación: convertir las rayitas en X cuando está activo */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
+}
+
+/* ============================================ */
+/* RESPONSIVE MÓVIL - MENÚ HAMBURGUESA */
+/* ============================================ */
+@media (max-width: 1200px) {
+  /* Cambiado a 1200px para que sea más fácil de probar */
+  /* MOSTRAR BOTÓN HAMBURGUESA */
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  /* MENÚ MÓVIL DESLIZABLE */
+  .Menu-Horizontal {
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: calc(100vh - 5rem);
+    background-color: lightgreen;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+
+  .Menu-Horizontal.active {
+    right: 0;
+  }
+
+  .Menu-Horizontal li {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .Menu-Horizontal li a {
+    display: block;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  /* SUBMENÚ MÓVIL */
+  .Menu-Vertical {
+    position: static;
+    width: 100%;
+    background-color: rgba(135, 206, 235, 0.5);
+    display: none;
+    margin-top: 0.5rem;
+  }
+
+  .has-submenu.submenu-open .Menu-Vertical {
+    display: block !important;
+  }
+
+  .Menu-Vertical li {
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    border-bottom: none;
+  }
+
+  .Menu-Vertical li a {
+    font-size: 1rem;
+  }
+
+  /* Desactivar hover desktop */
+  .Menu-Horizontal li:hover .Menu-Vertical {
+    display: none;
+  }
+}
+
+/* DESKTOP - Hover funcional */
+@media (min-width: 1201px) {
+  .Menu-Horizontal li:hover .Menu-Vertical {
+    display: block;
   }
 }
